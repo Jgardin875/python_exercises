@@ -72,3 +72,109 @@ def calculate_tip(tip1, bill1):
     return(bill1 + (tip1*bill1))
 
 calculate_tip(tip, bill)
+
+
+#6 Define a function named apply_discount. It should accept a original price, and a discount percentage, and return the price after the discount is applied.
+
+orig_price = float(input('Input the original price: '))
+disc_perc = float(input('percent discount percentage: '))
+
+def apply_discount(origprice, discperc):
+    perc = discperc/100
+    total6 = origprice * (1-perc)
+    return total6
+
+apply_discount(orig_price, disc_perc)
+
+#7 Define a function named handle_commas. It should accept a string that is a number that contains commas in it as input, and return a number as output.
+
+num7 = input('Input number: ')
+
+def handle_commas(num):
+    return num.replace(',', "")
+
+handle_commas(num7)
+
+
+
+
+#8 Define a function named get_letter_grade. It should accept a number and return the letter grade associated with that number (A-F).
+
+while True:
+    num_grade = int(input('Integer grade please:'))
+    if num_grade >= 88:
+        print('A')
+    elif num_grade >= 80:
+        print('B')
+    elif num_grade >= 67:
+        print('C')
+    elif num_grade >= 60:
+        print('D')
+    else:
+        print('F')
+
+    choice = input('Do you want to continue? Plese enter y or n')
+    if choice.lower() == 'y':
+        continue
+    else:
+        break
+
+
+
+#9 Define a function named remove_vowels that accepts a string and returns a string with all the vowels removed.
+
+def is_vowel(alpha):
+    if alpha in ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']:
+      return True
+    else:
+        return False
+
+
+def remove_vowels(words):
+    for char in words:
+        if is_vowel(char) == True:
+            words = words.replace(char, '')
+    return (words)
+
+
+remove_vowels('potato')
+
+#10 Define a function named normalize_name. It should accept a string and return a valid python identifier, that is:
+
+    # anything that is not a valid python identifier should be removed
+    # leading and trailing whitespace should be removed
+    # everything should be lowercase
+    # spaces should be replaced with underscores
+    # for example:
+    #     Name will become name
+    #     First Name will become first_name
+    #     % Completed will become completed
+
+
+def normalize_name(input):
+    input.lower()
+
+
+
+
+
+
+
+
+
+# Write a function named cumulative_sum that accepts a list of numbers and returns a list that is the cumulative sum of the numbers in the list.
+
+    # cumulative_sum([1, 1, 1]) returns [1, 2, 3]
+    # cumulative_sum([1, 2, 3, 4]) returns [1, 3, 6, 10]
+
+def cumulative_sum(list):
+    output = [list[0]]
+    q= len(list)
+    n=0
+    while n < (q-1):
+        r =output[n]+list[n+1]
+        output.append(r)
+        n += 1
+    return output
+
+cumulative_sum([1,1,1])
