@@ -161,17 +161,6 @@ for i in range (1, (v + 1)):
 
 #5
 
-# if num_grade in range (88-101):
-#      print('A')
-# elif num_grade in range (80-88):
-#      print('B')
-# elif num_grade in range (67-80):
-#      print('C')
-# elif num_grade in  range (60-67):
-#      print('D')
-# else:
-#      print('F')
-
 
 while True:
     num_grade = int(input('Integer grade please:'))
@@ -192,27 +181,6 @@ while True:
     else:
         break
 
-#why can't i do int(input()) in the same line?
-
-while True:
-    num_grade = input('Integer grade please:')
-    num_grade = int(num_grade)
-    if num_grade >= 88:
-        print('A')
-    elif num_grade >= 80:
-        print('B')
-    elif num_grade >= 67:
-        print('C')
-    elif num_grade >= 60:
-        print('D')
-    else:
-        print('F')
-
-    choice = input('Do you want to continue? Plese enter y or n')
-    if choice.lower() == 'y':
-        continue
-    else:
-        break
 
 
 #6
@@ -226,23 +194,7 @@ for book in books:
     print(f"The book {book['title']} by {book['author']} is in the {book['genre']} genre")
 
 
-#when do i use curly brackets?
-find_genre = input('What genre are you looking for?')
-b = []
-for book in books:
-    if find_genre == {book['genre']}:
-        b.append(f"{book['title']} by {book['author']}")
-        print(b)
 
-find_genre = input('What genre are you looking for?')
-b = []
-for book in books:
-    if find_genre == {book['genre']}:
-        b.append({book['title']})
-        print(b)
-
-
-#correct
 user_input = input('Please enter an genre: ')
 l = []
 for book in books:
