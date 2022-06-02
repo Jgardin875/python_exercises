@@ -100,24 +100,20 @@ handle_commas(num7)
 
 #8 Define a function named get_letter_grade. It should accept a number and return the letter grade associated with that number (A-F).
 
-while True:
-    num_grade = int(input('Integer grade please:'))
-    if num_grade >= 88:
-        print('A')
-    elif num_grade >= 80:
-        print('B')
-    elif num_grade >= 67:
-        print('C')
-    elif num_grade >= 60:
-        print('D')
+def get_letter_grade(num_grade):
+    if type(num_grade) == int or type(num_grade) == float:
+        if num_grade >= 88:
+            print('A')
+        elif num_grade >= 80:
+            print('B')
+        elif num_grade >= 67:
+            print('C')
+        elif num_grade >= 60:
+            print('D')
+        else:
+            print('F')
     else:
-        print('F')
-
-    choice = input('Do you want to continue? Plese enter y or n')
-    if choice.lower() == 'y':
-        continue
-    else:
-        break
+        return 'Input needs to be a postive number'
 
 
 
@@ -151,13 +147,15 @@ remove_vowels('potato')
     #     % Completed will become completed
 
 
-def normalize_name(input):
-    input.lower()
+#removes special characters but keeps spaces
+def remove_special_char(string):
+    return ''.join([c for c in string if c.isalnum() or c == ' '])
 
 
-
-
-
+#remove special characters, strip leading and following spaces, replace ramining spaces with '_'
+def normalize_name(string):
+    special_char_removed = remove_special_char(string)
+    return special_char_removed.lower().strip().replace(' ', '_')
 
 
 
